@@ -1,0 +1,125 @@
+/* Sidebar.module.css */
+
+.desktopSidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 256px;
+  background-color: var(--color-white);
+  border-right: 2px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  padding: 24px 16px;
+  z-index: 100;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 8px 32px 8px;
+}
+
+.logoIcon {
+  width: 32px;
+  height: 32px;
+  color: var(--color-blue);
+  filter: drop-shadow(0 2px 0 var(--color-blue-border));
+}
+
+.logoText {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: var(--color-blue);
+  text-shadow: 0 1px 0 var(--color-blue-border);
+}
+
+.navMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  color: var(--color-charcoal);
+  font-weight: 700;
+  font-size: 16px;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  border: 2px solid transparent;
+}
+
+.navItem:hover {
+  background-color: var(--color-bg-warm);
+}
+
+.navItemActive {
+  background-color: #E1F5FE;
+  color: var(--color-blue);
+  border: 2px solid var(--color-blue);
+  border-bottom-width: 4px;
+}
+
+.navIcon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Mobile Bottom Nav styles */
+.mobileBottomNav {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .desktopSidebar {
+    display: none;
+  }
+
+  .mobileBottomNav {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 72px;
+    background-color: var(--color-white);
+    border-top: 2px solid var(--color-border);
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 12px;
+    z-index: 100;
+  }
+
+  .mobileNavItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    flex: 1;
+    height: 100%;
+    color: var(--color-muted);
+    font-weight: 700;
+    font-size: 11px;
+  }
+
+  .mobileNavItemActive {
+    color: var(--color-blue) !important;
+  }
+
+  .mobileNavIcon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .mobileNavLabel {
+    font-size: 10px;
+    font-weight: 700;
+  }
+}

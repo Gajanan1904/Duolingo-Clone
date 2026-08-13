@@ -1,0 +1,103 @@
+/* TopBar.module.css */
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background-color: var(--color-white);
+  border-bottom: 2px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+}
+
+.leftSection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.courseBadge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: var(--color-bg-warm);
+  border: 2px solid var(--color-border);
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.courseBadge:hover {
+  background-color: #E5E5E5;
+}
+
+.flagIcon {
+  font-size: 16px;
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.statItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 800;
+  font-size: 16px;
+  user-select: none;
+}
+
+.streak {
+  color: #FF9600;
+}
+
+.xp {
+  color: var(--color-yellow-border);
+}
+
+.hearts {
+  color: var(--color-red);
+}
+
+.gems {
+  color: #1CB0F6;
+}
+
+.icon {
+  width: 22px;
+  height: 22px;
+  filter: drop-shadow(0 1.5px 0 currentColor);
+}
+
+@media (max-width: 600px) {
+  .topBar {
+    padding: 12px 16px;
+  }
+  
+  .rightSection {
+    gap: 12px;
+  }
+
+  .statLabel {
+    display: none; /* Hide numbers on extremely small screens if necessary, or just keep it small */
+  }
+
+  .statItem {
+    font-size: 14px;
+    gap: 4px;
+  }
+
+  .icon {
+    width: 18px;
+    height: 18px;
+  }
+}

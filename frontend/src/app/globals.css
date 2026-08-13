@@ -1,0 +1,205 @@
+:root {
+  --color-bg-warm: #FAF8F5;
+  --color-green: #58CC02;
+  --color-green-border: #46A302;
+  --color-blue: #1CB0F6;
+  --color-blue-border: #1899D6;
+  --color-yellow: #FFC800;
+  --color-yellow-border: #E6B400;
+  --color-red: #FF4B4B;
+  --color-red-border: #EA2B2B;
+  --color-purple: #84D8FF;
+  --color-purple-dark: #3B82F6;
+  --color-charcoal: #3C3C3C;
+  --color-muted: #777777;
+  --color-border: #E5E5E5;
+  --color-white: #FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--color-bg-warm);
+  color: var(--color-charcoal);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg-warm);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #CDCDCD;
+}
+
+/* Custom Typography & Global Styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+/* Tactile Layout Helper Classes */
+.btn-tactile {
+  position: relative;
+  border: none;
+  border-radius: 16px;
+  padding: 14px 20px;
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+  transition: filter 0.1s ease, transform 0.1s ease;
+  top: 0;
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+/* Tactile 3D Shadows */
+.btn-green {
+  background: var(--color-green);
+  color: var(--color-white);
+  box-shadow: 0 4px 0 var(--color-green-border);
+}
+.btn-green:hover {
+  filter: brightness(1.05);
+}
+.btn-green:active {
+  top: 4px;
+  box-shadow: 0 0 0 var(--color-green-border);
+}
+
+.btn-blue {
+  background: var(--color-blue);
+  color: var(--color-white);
+  box-shadow: 0 4px 0 var(--color-blue-border);
+}
+.btn-blue:hover {
+  filter: brightness(1.05);
+}
+.btn-blue:active {
+  top: 4px;
+  box-shadow: 0 0 0 var(--color-blue-border);
+}
+
+.btn-yellow {
+  background: var(--color-yellow);
+  color: var(--color-charcoal);
+  box-shadow: 0 4px 0 var(--color-yellow-border);
+}
+.btn-yellow:hover {
+  filter: brightness(1.05);
+}
+.btn-yellow:active {
+  top: 4px;
+  box-shadow: 0 0 0 var(--color-yellow-border);
+}
+
+.btn-red {
+  background: var(--color-red);
+  color: var(--color-white);
+  box-shadow: 0 4px 0 var(--color-red-border);
+}
+.btn-red:hover {
+  filter: brightness(1.05);
+}
+.btn-red:active {
+  top: 4px;
+  box-shadow: 0 0 0 var(--color-red-border);
+}
+
+.btn-tactile:disabled {
+  background: #E5E5E5 !important;
+  color: #AFAFAF !important;
+  box-shadow: 0 4px 0 #CDCDCD !important;
+  cursor: not-allowed;
+  top: 0 !important;
+  filter: none !important;
+}
+
+/* Cards & Containers with tactile border */
+.card-tactile {
+  background: var(--color-white);
+  border: 2px solid var(--color-border);
+  border-bottom: 4px solid var(--color-border);
+  border-radius: 16px;
+  padding: 16px;
+  transition: transform 0.1s ease, border-color 0.1s ease;
+}
+.card-tactile:hover {
+  border-color: #CDCDCD;
+}
+
+/* Animations */
+@keyframes pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+.animate-pop {
+  animation: pop 0.3s ease-in-out;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.2s ease-out;
+}
+
+/* Layout Utilities */
+.sidebar-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  min-height: 100vh;
+  margin-left: 256px; /* Sidebar width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    margin-bottom: 72px; /* Bottom bar height on mobile */
+  }
+}

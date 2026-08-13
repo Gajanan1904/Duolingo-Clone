@@ -1,0 +1,170 @@
+/* Leaderboard.module.css */
+
+.container {
+  max-width: 560px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 32px 16px 120px 16px;
+}
+
+.pageTitle {
+  font-size: 28px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 8px;
+  color: var(--color-charcoal);
+}
+
+.pageSubtitle {
+  font-size: 15px;
+  text-align: center;
+  font-weight: 700;
+  color: var(--color-blue);
+  margin-bottom: 32px;
+}
+
+/* Podium */
+.podium {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 40px;
+}
+
+.podiumItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+}
+
+.podiumCurrentUser .podiumLabel {
+  color: var(--color-blue);
+}
+
+.podiumLabel {
+  font-size: 13px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 4px;
+  max-width: 90px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.podiumXP {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-muted);
+  margin-bottom: 8px;
+}
+
+.podiumBlock {
+  width: 100%;
+  border-radius: 16px 16px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: 2px solid rgba(0,0,0,0.08);
+}
+
+.podiumMedal {
+  font-size: 32px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Rest of list */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--color-white);
+  border: 2px solid var(--color-border);
+  border-bottom: 4px solid var(--color-border);
+  border-radius: 16px;
+  padding: 14px 16px;
+  transition: border-color 0.2s ease;
+}
+
+.row:hover {
+  border-color: #CDCDCD;
+}
+
+.rowCurrentUser {
+  background-color: #E1F5FE;
+  border-color: var(--color-blue) !important;
+}
+
+.rank {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--color-muted);
+  min-width: 28px;
+}
+
+.rowAvatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-blue), var(--color-purple-dark));
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.rowUsername {
+  flex: 1;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-charcoal);
+}
+
+.rowXP {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--color-yellow-border);
+}
+
+/* Skeleton & Error */
+.skeletonRow {
+  height: 60px;
+  background-color: #E5E5E5;
+  border-radius: 16px;
+  margin-bottom: 8px;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.errorState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  gap: 16px;
+  text-align: center;
+  color: var(--color-red);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 0.3; }
+  100% { opacity: 0.6; }
+}

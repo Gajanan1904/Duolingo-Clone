@@ -1,0 +1,115 @@
+# =========================================================
+# Python / Django
+# =========================================================
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Django local files
+*.log
+
+# Environment variables / secrets
+.env
+.env.*
+!.env.example
+
+# Local SQLite database
+db.sqlite3
+db.sqlite3-journal
+db.sqlite3-shm
+db.sqlite3-wal
+
+# Django collected static files
+staticfiles/
+media/
+
+# Coverage / testing
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# =========================================================
+# Node / Next.js
+# =========================================================
+
+node_modules/
+.next/
+out/
+dist/
+build/
+
+# Next.js cache
+.turbo/
+
+# Environment files
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+
+# npm logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# =========================================================
+# IDE / Editor
+# =========================================================
+
+.vscode/
+.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================================================
+# Temporary / local files
+# =========================================================
+
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# Local cookies / test artifacts
+cookies.txt
+*.cookie
+
+# =========================================================
+# Build / deployment artifacts
+# =========================================================
+
+.vercel/
+.render/
+
+# =========================================================
+# Python tooling
+# =========================================================
+
+pip-wheel-metadata/
+*.egg-info/
+.eggs/
+wheels/
+
+# =========================================================
+# Local backup archives
+# =========================================================
+
+*.zip
